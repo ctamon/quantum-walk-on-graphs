@@ -52,27 +52,27 @@ def listToMatrix(G):
 #####################################################################################
 def draw_graph(graph):
 
-    # extract nodes from graph
-    nodes = set([n1 for n1, n2 in graph] + [n2 for n1, n2 in graph])
+	# extract nodes from graph
+	nodes = set([n1 for n1, n2 in graph] + [n2 for n1, n2 in graph])
 
-    # create networkx graph
-    G=nx.Graph()
+	# create networkx graph
+	G=nx.Graph()
 
-    # add nodes
-    for node in nodes:
-        G.add_node(node)
+	# add nodes 
+	for node in nodes: 
+		G.add_node(node)
 
-    # add edges
-    for edge in graph:
-        G.add_edge(edge[0], edge[1])
+	# add edges 
+	for edge in graph: 
+		G.add_edge(edge[0], edge[1])
 
-    # draw graph
-    pos = nx.shell_layout(G)
-    print "Pos = ", pos
-    nx.draw(G, pos)
+	# draw graph 
+	pos = nx.shell_layout(G) 
+	print "Pos = ", pos 
+	nx.draw(G, pos)
 
-    # show graph
-    plt.show()
+	# show graph
+	plt.show()
 
 
 #####################################################################################
