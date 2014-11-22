@@ -82,8 +82,6 @@ def qwalk_me(A):
 		# only use the red spectrum for now (to encode the amplitudes)
 		Color = [(my_color[i],0,0) for i in range(num_rows)]
 
-		# YOU ARE HERE
-
 		# draw the edges
 		for edge in G:
 			pygame.draw.line(DISPLAYSURF, BLUE, Vertex[edge[0]], Vertex[edge[1]], thickness)
@@ -120,7 +118,7 @@ def qwalk_me(A):
 # Step1: defining a graph
 A = pathGraph(3)
 
-# run the quantum walk simulation
+# Step 2: run the quantum walk simulation
 qwalk_me(A)
 
 ############################################################################
